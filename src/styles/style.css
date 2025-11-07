@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'tailwindcss';
+
+* {
+    font-family: "Istok Web", sans-serif;
+}
+
+span {
+    color: black;
+}
+
+boxshadow {
+    box-shadow: -4px 6px 23px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -4px 6px 23px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 6px 23px 0px rgba(0, 0, 0, 0.75);
+}
