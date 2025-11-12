@@ -9,14 +9,14 @@ const NavBar = () => {
     return (
         <>
 
-            <div className="md:flex z-50 fixed left-10 top-8 lg:left-40 lg:top-20 hidden gap-10 backdrop-blur-md">
+            <div className="md:flex z-50 fixed left-10 top-8 lg:left-31 lg:top-20 hidden gap-10 backdrop-blur-md">
                 {items.map((item, i) => {
                     return <div
                         onClick={() => changeNavItem(item)}
                         key={`nav-bar-${i}`} className="font-semibold text-2xl cursor-pointer select-none flex flex-col gap-[3px]">
                         {item}
                         {selected === item && <motion.div
-                            className="h-2 bg-black w-full relative top-[-6px]"
+                            className="h-1 bg-black w-full relative top-[-6px]"
                             initial={{ width: 0 }}
                             animate={{ width: '100%' }}
                         ></motion.div>}

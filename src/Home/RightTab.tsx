@@ -3,49 +3,40 @@ import { motion } from 'framer-motion'
 
 const RightTab = () => {
 
+    type Word = {
+        color: string,
+        content: string,
+        needAnd?: boolean
+    };
 
-    const style1 = 'absolute h-[600px] w-[200px] rounded-full shadow-2xl shadow-black'
+    const rightBarContent: Word[] = [ { color: '#6C17AE', content: 'Innovation'}, { color: '#5779FF', content: 'Entrepreneurship', needAnd: true}, { color: '#FC0150', content: 'Development',  }, { color: 'oklch(69.6% 0.17 162.48)', content: 'Cell'}]
 
-    function TextSection() {
-        return <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1.3 }}
-            className="flex flex-col text-white z-40 font-bold text-4xl md:text-5xl">
-            <h1><span>I</span>nnovation</h1>
-            <p className="text-xl font-bold">and</p>
-            <h1><span>E</span>ntrepreneurship</h1>
-            <h1><span>D</span>evelopment</h1>
-            <h1><span>C</span>ell</h1>
-        </motion.div>
-    }
-
-    let styles = ['top-[0px] bg-[#6C17AE]', 'top-[60px] bg-[#5779FF] ', 'top-0 bg-[#FC0150]']
-
-    const test1 = styles;
-    for (let i = 0; i < 2; i++)
-        styles = [...test1, ...styles]
 
     return (
-        <div>
-            <div className="hidden md:flex md:px-[100px] w-fit lg:justify-center pt-[140px] gap-0 relative md:w-[600px]">
+        <div className='w-full'>
 
-                {styles.map((item, i) => {
+            <div className='md:flex hidden flex-col items-center gap-0 w-screen ml-[16%] lg:ml-[20%]'>
+                {rightBarContent.map((item, i) => {
                     return <motion.div
-                        key={`animation-1-${i}`}
-                        style={{ left: `${i * 100}px` }}
-                        className={`${style1} ${item}`}
-                        initial={{ top: '200px', opacity: 0.4 }}
-                        animate={{ top: `-100px`, opacity: 1 }}
-                        transition={{ delay: i * 0.02, duration: 0.5 }}
+                        initial={{opacity: 0.4, x: 100}}
+                        animate={{opacity: 1, x: 0}}
+                        transition={{delay: 0.1 * i, damping: 0}} 
+                        className='w-screen px-3 py-2 flex items-center'
+                        style={{backgroundColor: `${item.color}`}}
+                        key={`right-bar-element-${i}`}
                     >
+                        <h1 className='text-white font-bold text-8xl'>{item.content.slice(0, 1)}</h1>
+                        <h1 className='text-6xl lg:text-7xl font-medium'>{item.content.slice(1)}</h1>
                     </motion.div>
                 })}
-                <TextSection />
             </div>
 
-            <div className="md:hidden flex flex-col">
-                <div className='bg-[#6C17AE] w-fit p-3 flex items-end gap-1 font-bold '>
+            <motion.div 
+                initial={{opacity: 0.2, y: 50}}
+                animate={{opacity: 1, y: 0}}
+                transition={{damping: 0, duration: 0.4}}
+                className="md:hidden flex flex-col">
+                <div className='bg-[#6C17AE] p-3 flex items-end gap-1 font-bold '>
                     <h1 className='text-white text-4xl'>I</h1>
                     <h1 className='text-black text-4xl'>nnovation</h1>
                 </div>
@@ -55,16 +46,16 @@ const RightTab = () => {
                     <h1>ntrepreneurship</h1>
                 </div>
 
-                <div className='font-bold text-4xl p-3 bg-[#FC0150] flex w-fit'>
+                <div className='font-bold text-4xl p-3 bg-[#FC0150] flex '>
                     <h1 className='text-white'>D</h1>
                     <h1>evelopment</h1>
                 </div>
 
-                <div className='p-3 font-bold flex text-4xl bg-emerald-500 w-fit'>
+                <div className='p-3 font-bold flex text-4xl bg-emerald-500 '>
                     <h1 className='text-white'>C</h1>
                     <h1>ell</h1>
                 </div>
-            </div>
+            </motion.div>
 
         </div>
     )

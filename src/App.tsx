@@ -3,6 +3,8 @@ import "./styles/style.css"
 import { NavBar } from "./nav-bar"
 import { Home } from "./Home"
 import { Execom } from "./Execom"
+import ActivityPresenter from "./Activities/ActivityPresenter"
+import { Footer } from "./Footer"
 
 
 const App = () => {
@@ -12,15 +14,23 @@ const App = () => {
     return (
         <React.StrictMode>
             <div>
-                <NavBar/>
+                <NavBar />
                 <div id="scroll-window" ref={element} className="flex flex-col max-h-screen  w-screen overflow-y-scroll overflow-x-hidden items-center lg:px-[8vw] lg:pt-40 pt-30 px-8">
                     <div className="flex-1 w-full h-full">
                         <div id="page-1" className="w-full h-full">
                             <Home />
                         </div>
 
-                        <div id="page-2" className="w-full h-full">
+                        <div id="page-2" className="w-full h-full mt-10">
+                            <ActivityPresenter />
+                        </div>
+
+                        <div id="page-3" className="w-full h-full">
                             <Execom />
+                        </div>
+
+                        <div id="page-4" className="w-full h-full">
+                            <Footer />
                         </div>
                     </div>
                 </div>
