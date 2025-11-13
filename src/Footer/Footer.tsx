@@ -27,11 +27,6 @@ const Footer = () => {
                             <FaInstagram size={30} />
                         </div>
                     </a>
-                    <a href="">
-                        <div className="rounded-full bg-linear-60 bg-emerald-500 px-3 py-3  transition-all duration-100  hover:opacity-70">
-                            <FaWhatsapp size={30} />
-                        </div>
-                    </a>
                     <a href="https://in.linkedin.com/company/iedc-gcek">
                         <div className="rounded-full bg-linear-60 bg-blue-500 px-3 py-3  transition-all duration-100  hover:opacity-70">
                             <FaLinkedin size={30} />

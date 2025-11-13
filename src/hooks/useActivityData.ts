@@ -3,9 +3,19 @@ import img12 from "/src/static/Activities/12.png"
 import img21 from "/src/static/Activities/21.png"
 import img22 from "/src/static/Activities/22.png"
 import img31 from "/src/static/Activities/31.png"
-import img41 from "/src/static/Activities/41.png"
-import img42 from "/src/static/Activities/42.png"
-import img43 from "/src/static/Activities/43.png"
+import img51 from "/src/static/Activities/51.png"
+import img52 from "/src/static/Activities/52.png"
+import img61 from "/src/static/Activities/61.png"
+import img71 from "/src/static/Activities/71.png"
+import img72 from "/src/static/Activities/72.png"
+import img81 from "/src/static/Activities/81.png"
+import img82 from "/src/static/Activities/82.png"
+import img91 from "/src/static/Activities/91.png"
+import img92 from "/src/static/Activities/92.png"
+
+import img121 from "/src/static/Activities/121.png"
+import img122 from "/src/static/Activities/122.png"
+import img123 from "/src/static/Activities/123.png"
 
 export interface Activity {
     id: string;
@@ -43,20 +53,12 @@ export default function useActivityData() {
             images: [img31],
         },
         {
-            id: "4",
-            mainTitle: "FIRST YEAR ORIENTATION",
-            subTitle: "Orientation",
-            explanation:
-                "Held on August 20, 2025, to familiarize first-year students with IEDC's vision, mission, and opportunities for innovation, mentorship, and hands-on learning.",
-            images: [img41, img42, img43],
-        },
-        {
             id: "5",
             mainTitle: "BRANDING ONAM",
             subTitle: "Competition",
             explanation:
                 "A creative challenge conducted around September 10, 2025, encouraging students to reimagine Onam as a global brand through creative designs, taglines, and posters blending culture with marketing skills.",
-            images: [],
+            images: [img51, img52],
         },
         {
             id: "6",
@@ -64,7 +66,7 @@ export default function useActivityData() {
             subTitle: "Talk Series",
             explanation:
                 "A dynamic talk series launched to inspire students through entrepreneurial journeys and lessons from real founders. It aimed to guide students in turning college projects into startups.",
-            images: [],
+            images: [img61],
         },
         {
             id: "7",
@@ -72,7 +74,7 @@ export default function useActivityData() {
             subTitle: "Talk Session",
             explanation:
                 "The first episode of the VisionX series, held on September 19, 2025, featured Mr. Atthri Anand, Co-Founder & CEO of Deepflow Technologies, who shared his entrepreneurial journey and lessons learned.",
-            images: [],
+            images: [img71, img72],
         },
         {
             id: "8",
@@ -80,7 +82,7 @@ export default function useActivityData() {
             subTitle: "Competition",
             explanation:
                 "An online quiz conducted on October 4, 2025, via Quizizz, aimed at testing and improving students' knowledge about startups and entrepreneurship through a fun and engaging format.",
-            images: [],
+            images: [img81, img82],
         },
         {
             id: "9",
@@ -88,23 +90,7 @@ export default function useActivityData() {
             subTitle: "Talk Session",
             explanation:
                 "Held on October 21, 2025, featuring Mr. Nandakishor M, CEO of Convai Innovations, who shared his experiences of transforming ideas into scalable ventures and key entrepreneurial lessons.",
-            images: [],
-        },
-        {
-            id: "10",
-            mainTitle: "FOUNDERS UNFILTERED",
-            subTitle: "Story Series",
-            explanation:
-                "A story series that provided candid insights into entrepreneurs' journeys, highlighting their struggles, successes, and lessons to motivate the student community.",
-            images: [],
-        },
-        {
-            id: "11",
-            mainTitle: "ENTREPRENEURIAL STORY SERIES",
-            subTitle: "Video Series",
-            explanation:
-                "A video series that showcased the success stories of entrepreneurs, summarizing their paths, challenges, and achievements in short one-minute clips.",
-            images: [],
+            images: [img91, img92],
         },
         {
             id: "12",
@@ -112,7 +98,7 @@ export default function useActivityData() {
             subTitle: "Knowledge Series",
             explanation:
                 "A weekly series that introduced students to major inventions around the world, featuring short descriptions, historical context, and visuals to promote curiosity and learning.",
-            images: [],
+            images: [img121, img122, img123],
         },
         {
             id: "13",
@@ -120,14 +106,6 @@ export default function useActivityData() {
             subTitle: "Competition",
             explanation:
                 "A diary writing competition organized on January 3, 2023, as part of New Year celebrations under the theme 'Happiness Festival'. It aimed to awaken creativity among GCEK students, encouraging them to express thoughts and experiences through diary entries.",
-            images: [],
-        },
-        {
-            id: "14",
-            mainTitle: "CHAI TALKS & LANTERN NIGHT",
-            subTitle: "Icebreaking Session",
-            explanation:
-                "An engaging icebreaking event held on January 5, 2023, for first-year students at the main auditorium. Senior students shared experiences and career insights, followed by fun games and a lantern release to conclude the evening.",
             images: [],
         },
         {

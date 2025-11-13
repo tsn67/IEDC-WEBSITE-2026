@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://iedc-gcek.vercel.app/sitemap.xml
